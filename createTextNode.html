@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>텍스트노드 추가</title>
+  </head>
+  <body>
+    <h1>환영합니다</h1>
+    <script>
+      function displayWelcomeMessage() {
+        var WelcomeMessage = `안녕하세요 오늘은 ${getCurrentDate()} 입니다.`;
+        // 새로운 텍스트 노드 생성
+        var textNode = document.createTextNode(WelcomeMessage);
+        // <h1>요소에 텍스트 노드 추가
+        var heading = document.querySelector("h1");
+        heading.appendChild(textNode);
+      }
+      //추가함수 호출
+      displayWelcomeMessage();
+      function getCurrentDate() {
+        var date = new Date();
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;
+        var day = date.getDate();
+        return `${year}년 ${month}월 ${day}일`;
+      }
+    </script>
+  </body>
+  <script></script>
+</html>

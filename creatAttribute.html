@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이미지 속성 추가하기</title>
+  </head>
+  <body>
+    <h1>이미지 속성 추가</h1>
+    <img
+      src="images/aebede13eed766c14f8e46d68509586c7154249a3890514a43687a85e6b6cc82.png"
+      alt="아무거나"
+      id="myImage"
+    />
+    <script>
+      //이미지 태그에 속성을 추가하는 함수
+      function addImageAttribute() {
+        var image = document.getElementById("myImage");
+        // 새로운 속성 객체를 생성
+        var attribute = document.createAttribute("title");
+        // 속성값 설정
+        attribute.value = "재빈";
+        // 이미지 태그에 속성을 추가
+        image.setAttributeNode(attribute);
+      }
+      //이미지 태그에 속성 추가한 함수 호출
+      addImageAttribute();
+    </script>
+  </body>
+</html>
